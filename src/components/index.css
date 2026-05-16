@@ -866,8 +866,51 @@ main {
   width:100%;
   text-align:center;
   padding:12px;
-  background:rgba(0,0,0,0.7);
+  background:rgba(0,0,0,0);
   color:white;
   text-decoration:none;
   font-weight:bold;
 }
+.iframe-wrapper{
+  display:flex;
+  justify-content:center;
+    position: relative;
+    overflow: hidden;
+    height: 900px;
+    width:100%;
+    align-items:center;
+}
+
+.iframecode{
+  
+  width: 100%;
+    height: 1000px;
+    border: none;
+
+    margin-top: -80px;
+    
+}
+
+.coding_platform{
+  display:flex;
+  justify-content:center;
+  align-items:center;  
+  margin-top: 80px;
+
+}
+
+.navbarhider{
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  height: 100vh;
+  width: 6.1%;
+   margin-top: 80px;
+
+  background-color: #F3F4F6;
+
+  z-index: 1;
+}
+
