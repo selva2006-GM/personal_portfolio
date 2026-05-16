@@ -10,6 +10,7 @@ export default function CodingPlatforms() {
           className="iframecode"
           src="https://codolio.com/profile/ganesh2006"
           title="Codolio"
+           scrolling="no"
         ></iframe>
 
         {/* click blocker */}

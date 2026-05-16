@@ -876,7 +876,7 @@ main {
   justify-content:center;
     position: relative;
     overflow: hidden;
-    height: 900px;
+    height: 1000px;
     width:100%;
     align-items:center;
 }
@@ -887,7 +887,7 @@ main {
     height: 1000px;
     border: none;
 
-    margin-top: -80px;
+    margin-top: -89px;
     
 }
 
@@ -905,9 +905,9 @@ main {
   top: 0;
   left: 0;
 
-  height: 100vh;
+  height: 950.5px;
   width: 6.1%;
-   margin-top: 80px;
+   margin-top: 85px;
 
   background-color: #F3F4F6;
 
