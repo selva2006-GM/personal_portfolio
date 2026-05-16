@@ -898,6 +898,9 @@ main {
   margin-top: 80px;
 
 }
+.navbarhider{
+  display:none;
+}
 
 .navbarhider{
   position: absolute;

@@ -2,6 +2,10 @@ import React from "react";
 import "./index.css";
 
 export default function CodingPlatforms() {
+
+  function frameLoaded() {
+    document.querySelector(".navbarhider").style.display = "block";
+}
   return (
     <div className="coding_platform">
       <div className = "navbarhider"></div>
@@ -11,6 +15,7 @@ export default function CodingPlatforms() {
           src="https://codolio.com/profile/ganesh2006"
           title="Codolio"
            scrolling="no"
+           onLoad={frameLoaded}
         ></iframe>
 
         {/* click blocker */}
