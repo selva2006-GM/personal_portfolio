@@ -750,6 +750,77 @@ main {
   transform: none;
 }
 
+/*  Blog page */
+
+.blog-wrapperer{
+  display:flex;
+  align-items:center;
+  width:100%;
+  justify-content:center;
+}
+
+.blog-wrapper{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
+  gap: 40px;
+
+  width: 100%;
+  max-width: 1200px;
+
+  margin-top: 5vh;
+  padding: 40px 20px;
+  justify-content:center;
+
+}
+
+.blog-content {
+  padding: 18px;
+}
+
+.blog-content h3 {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.card-actions {
+  display: flex;
+  gap: 12px;
+  
+}
+
+.open-btn,
+.play-btn {
+  border: none;
+
+  padding: 10px 18px;
+
+  border-radius: 10px;
+
+  background: rgba(0, 0, 0, 0.82);
+  color: white;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.open-btn:hover,
+.play-btn:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+}
+
+.hide-grid {
+  display: none;
+}
+
+
+
+
+
+
 /* ============================================================
    RESPONSIVE — TABLET (≤1100px)
    ============================================================ */
