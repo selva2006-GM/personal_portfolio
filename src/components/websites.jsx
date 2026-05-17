@@ -31,6 +31,9 @@ function Ownwebsites() {
       name: "Authentication in Flask",
       link: "https://authentication-in-flask.onrender.com/",
     },
+    {
+      name: "Personal Portfolio",
+      link: "https://personal-portfolio-one-lac-96.vercel.app/"
   ];
 
 
