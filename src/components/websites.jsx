@@ -1,6 +1,10 @@
 import React from "react";
 import "./index.css";
 function Ownwebsites() {
+  window.scrollTo({
+              top: 0,
+              behavior: "smooth"
+          });
   const list = [
     {
       name: "Portfolio",
@@ -16,15 +20,11 @@ function Ownwebsites() {
     },
     {
       name: "Real Time Chat App",
-      link: "https://freechatroom-production.up.railway.app/"
+      link: "https://free-chat-room-ihga.onrender.com/"
     },
     {
       name: "Authentication in Flask",
-      link: "https://authentication-in-flask-production.up.railway.app/"
-    },
-    {
-      name: "github",
-      link: "https://github.com/selva2006-GM"
+      link: "https://authentication-in-flask.onrender.com/"
     }
   ];
 
