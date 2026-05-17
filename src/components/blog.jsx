@@ -44,6 +44,7 @@ export default function Blog() {
               className="iframe"
               src={item.link}
               title={item.name}
+              scrolling="no"
             ></iframe>
 
             <div className="blog-content">

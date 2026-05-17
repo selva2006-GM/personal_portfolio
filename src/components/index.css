@@ -806,6 +806,15 @@ main {
   transition: 0.3s ease;
 }
 
+.icontainer {
+  overflow: hidden;
+}
+
+.iframe {
+  width: calc(100% + 17px);
+  height: 100%;
+}
+
 .open-btn:hover,
 .play-btn:hover {
   background: #2563eb;
