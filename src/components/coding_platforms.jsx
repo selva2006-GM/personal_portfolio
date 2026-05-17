@@ -29,7 +29,7 @@ function handleNavbarHider() {
 
   if (!navbarHider) return;
 
-  if (window.matchMedia("(min-width: 640px)").matches) {
+  if (window.matchMedia("(min-width: 768px)").matches) {
     navbarHider.style.display = "block";
   } else {
     navbarHider.style.display = "none";

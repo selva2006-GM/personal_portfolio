@@ -1151,3 +1151,18 @@ LARGE SCREENS (≥1600px)
     to   { width: 90%; }
   }
 }
+
+@media (max-width: 800px) {
+  .iframe-wrapper {
+    height: auto;
+    overflow: visible;
+  }
+
+  .iframecode {
+    width: 100%;
+    min-height: 100vh;
+    height: 2550px;
+
+    display: block;
+  }
+}
