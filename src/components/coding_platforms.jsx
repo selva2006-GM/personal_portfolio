@@ -3,19 +3,44 @@ import "./index.css";
 
 export default function CodingPlatforms() {
 
-  function frameLoaded() {
-    setTimeout(() => {
-        window.scrollTo({
-              top: 0,
-              behavior: "smooth"
-          });
+function frameLoaded() {
+  setTimeout(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
 
-        document.querySelector(".navbarhider").style.display = "block";
+    document.querySelector(".iframecode").style.display = "block";
 
-        document.querySelector(".iframecode").style.display = "block";
+    // Only show navbarhider on large screens
+    const navbarHider = document.querySelector(".navbarhider");
 
-    }, 1200); // 1 second
+if (navbarHider) {
+  if (window.matchMedia("(min-width: 1200px)").matches) {
+    navbarHider.style.display = "block";
+  } else {
+    navbarHider.style.display = "none";
+  }
 }
+  }, 1200);
+}
+function handleNavbarHider() {
+  const navbarHider = document.querySelector(".navbarhider");
+
+  if (!navbarHider) return;
+
+  if (window.matchMedia("(min-width: 640px)").matches) {
+    navbarHider.style.display = "block";
+  } else {
+    navbarHider.style.display = "none";
+  }
+}
+
+/* Run initially */
+
+
+/* Run whenever screen resizes */
+window.addEventListener("resize", handleNavbarHider);
   return (
     <div className="coding_platform">
       <div className = "navbarhider"></div>
