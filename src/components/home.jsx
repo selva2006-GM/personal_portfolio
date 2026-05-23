@@ -2,13 +2,13 @@ import React, { useState, useEffect } from "react";
 import Bio from "./bio";
 import "./index.css";
 
-export default function Home() {
+export default function Home({home}) {
   const [offset, setOffset] = useState(0);
-
   useEffect(() => {
     const handleScroll = () => {
       setOffset(window.scrollY);
-    };
+      };
+      
 
     // Add scroll listener
     window.addEventListener("scroll", handleScroll);
@@ -30,9 +30,9 @@ export default function Home() {
       className="Home"
       id="home" // Added id so your Navbar can find it
     >
-      <img src="/images/personalphoto.png" alt="personal" id="personalphoto" />
+      <img src={home.image} alt="personal" id="personalphoto" />
       <div id="greeting" className="cursor typewriter-animation">
-        Hi! I am S selva ganesh
+       {home.greeting}
       </div>
     </section>
   );

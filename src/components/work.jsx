@@ -18,7 +18,6 @@ function Language({ className }) {
     return (
         <div className={className}>
             <h1>Skills</h1>
-
             <div className="skill-section">
                 <h2>💻 Programming</h2>
                 <div className="icons">

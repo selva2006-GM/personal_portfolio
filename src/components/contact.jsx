@@ -1,7 +1,7 @@
 import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 import React from "react"
 import "./index.css";
-export default function Contact() {
+export default function Contact({contact}) {
 
     async function handleSubmit(e){
 
@@ -17,13 +17,13 @@ export default function Contact() {
 
   return (
     <section className="contact">
-      <h1>Contact Me</h1>
-      <p>Let’s build something meaningful together.</p>
+          <h1>{contact.title}</h1>
+          <p>{contact.subtitle}</p>
 
       <div className="contact-links">
 
         <a 
-        href="https://mail.google.com/mail/?view=cm&fs=1&to=server07052006@gmail.com&su=Let's%20Connect&body=Hi%20Selva,"
+        href={contact.email}
         target="_blank"
         rel="noopener noreferrer"
         >
@@ -31,7 +31,7 @@ export default function Contact() {
         </a>
 
         <a 
-          href="https://github.com/selva2006-GM" 
+          href={contact.github} 
           target="_blank" 
           rel="noopener noreferrer"
         >
@@ -39,7 +39,7 @@ export default function Contact() {
         </a>
 
         <a 
-          href="https://www.linkedin.com/in/sselvaganesh2006" 
+          href={contact.linkedin} 
           target="_blank" 
           rel="noopener noreferrer"
         >

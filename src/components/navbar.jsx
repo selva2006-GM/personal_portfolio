@@ -2,7 +2,7 @@ import React from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import "./index.css";
 
-function Navbar() {
+function Navbar({ name }) {
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -21,11 +21,10 @@ function Navbar() {
       const section = document.getElementById(id);
       section?.scrollIntoView({ behavior: "smooth" });
     }
-  };
-
+    };
   return (
     <nav className="navbar">
-      <div className="logo">S_selva_ganesh</div>
+          <div className="logo">{name}</div>
 
       <div className="nav-links">
         <button onClick={() => goToSection("home")}>Home</button>

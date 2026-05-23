@@ -5,13 +5,13 @@ import Works from "./work";
 import Contact from "./contact";
 import "./index.css";
 
-function MainPage() {
+function MainPage({data}) {
   return (
     <>
-      <section id="home"><Home /></section>
-      <section id="about"><Bio /></section>
-      <section id="work"><Works /></section>
-      <section id="contact"><Contact /></section>
+          <section id="home"><Home home={data.home} /></section>
+          <section id="about"><Bio bio={data.bio} /></section>
+      <section id="work"><Works/></section>
+          <section id="contact"><Contact contact={data.contact} /></section>
     </>
   );
 }
