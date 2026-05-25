@@ -10,7 +10,7 @@ function MainPage({data}) {
     <>
           <section id="home"><Home home={data.home} /></section>
           <section id="about"><Bio bio={data.bio} /></section>
-      <section id="work"><Works/></section>
+          <section id="work"><Works datalinks ={ data} /></section>
           <section id="contact"><Contact contact={data.contact} /></section>
     </>
   );

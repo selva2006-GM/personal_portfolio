@@ -1,8 +1,8 @@
 import React from "react";
 import "./index.css";
 
-export default function CodingPlatforms() {
-
+export default function CodingPlatforms({codingPlatforms}) {
+    console.log(codingPlatforms);
 function frameLoaded() {
   setTimeout(() => {
     window.scrollTo({
@@ -42,9 +42,10 @@ function handleNavbarHider() {
 /* Run whenever screen resizes */
 window.addEventListener("resize", handleNavbarHider);
   return (
-    <div className="coding_platform">
+      <div className="coding_platform">
       <div className = "navbarhider"></div>
       <div className="iframe-wrapper">
+        
         <iframe
           className="iframecode"
           src="https://codolio.com/profile/ganesh2006"

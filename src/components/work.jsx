@@ -1,12 +1,13 @@
 import React from "react";
-import {Link } from "react-router-dom";
+import {data, Link } from "react-router-dom";
 import "./index.css";
 
 
-function Work({ tit, link }) {
+function Work({ tit, link, datalink }) {
+    console.log(datalink);
     return (
         <div className="work">
-            <Link to={link} >
+            <Link to={link} data = {data}>
                 <h1>{tit}</h1>
             </Link>
         </div>
@@ -53,16 +54,16 @@ function Language({ className }) {
 
 
 
-export default function Works(){
+export default function Works({datalinks}){
+
     return (
         <div className="works">
-            <Work tit="coding platforms" link="/coding-platforms" />
-            <Work tit="web Projects" link="/websites" />
-            <Work tit="hardware project" link="https://example.com" />
-            <Work tit="blog" link="/blog" />
+            <Work tit="coding platforms" link="/coding-platforms" datalink ={datalinks.codingPlatforms} />
+            <Work tit="web Projects" link="/websites" datalink ={datalinks.websites} />
+            <Work tit="hardware project" link="https://example.com" datalink ={datalinks} />
+            <Work tit="blog" link="/blog" datalink ={datalinks.blogs} />
 
             <Language className="language-box"/>
         </div>
-
     );
 }
