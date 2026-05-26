@@ -48,7 +48,7 @@ window.addEventListener("resize", handleNavbarHider);
         
         <iframe
           className="iframecode"
-          src="https://codolio.com/profile/ganesh2006"
+          src="https://codolio.com/profile/ganesh2006" 
           title="Codolio"
            scrolling="no"
            onLoad={frameLoaded}
