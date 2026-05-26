@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 
+import Data from "./Data";
+
 export default function Blog() {
   const [activeBlog, setActiveBlog] = useState(null);
 
