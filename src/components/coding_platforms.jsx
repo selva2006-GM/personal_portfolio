@@ -1,9 +1,9 @@
 import React from "react";
 import "./index.css";
 import { data } from "react-router-dom";
+import Data from "./Data";
 
-export default function CodingPlatforms({ datalink }) {
-    console.log("coding: " + datalink);
+export default function CodingPlatforms() {
 function frameLoaded() {
   setTimeout(() => {
     window.scrollTo({
@@ -49,7 +49,7 @@ window.addEventListener("resize", handleNavbarHider);
         
         <iframe
           className="iframecode"
-          src="https://codolio.com/profile/ganesh2006" 
+          src={Data.codingPlatforms.link}
           title="Codolio"
            scrolling="no"
            onLoad={frameLoaded}

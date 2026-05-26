@@ -58,10 +58,10 @@ export default function Works(){
 
     return (
         <div className="works">
-            <Work tit="coding platforms" link="/coding-platforms" datalink ={Data.codingPlatforms} />
-            <Work tit="web Projects" link="/websites" datalink ={Data.websites} />
-            <Work tit="hardware project" link="https://example.com" datalink ={Data} />
-            <Work tit="blog" link="/blog" datalink ={Data.blogs} />
+            <Work tit="coding platforms" link="/coding-platforms" />
+            <Work tit="web Projects" link="/websites" />
+            <Work tit="hardware project" link="https://example.com" />
+            <Work tit="blog" link="/blog"/>
 
             <Language className="language-box"/>
         </div>

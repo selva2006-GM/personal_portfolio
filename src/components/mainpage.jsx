@@ -12,7 +12,7 @@ function MainPage() {
     <>
           <section id="home"><Home home={Data.home} /></section>
           <section id="about"><Bio bio={Data.bio} /></section>
-          <section id="work"><Works datalinks ={ Data} /></section>
+          <section id="work"><Works /></section>
           <section id="contact"><Contact contact={Data.contact} /></section>
     </>
   );

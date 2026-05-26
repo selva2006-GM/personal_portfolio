@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-
 import "./index.css";
+import Data  from "./Data";
 
 function Ownwebsites() {
   const [activeSite, setActiveSite] = useState(null);
@@ -10,32 +10,7 @@ function Ownwebsites() {
     behavior: "smooth",
   });
 
-  const list = [
-    {
-      name: "Portfolio",
-      link: "https://portfolio-mu-dusky-voqps6b9ep.vercel.app/",
-    },
-    {
-      name: "Number Converter",
-      link: "https://number-converter-app.vercel.app/",
-    },
-    {
-      name: "Movies Search",
-      link: "https://movies-search-lovat.vercel.app/",
-    },
-    {
-      name: "Real Time Chat App",
-      link: "https://free-chat-room-ihga.onrender.com/",
-    },
-    {
-      name: "Authentication in Flask",
-      link: "https://authentication-in-flask.onrender.com/",
-    },
-    {
-      name: "Personal Portfolio",
-      link: "https://personal-portfolio-one-lac-96.vercel.app/"
-    }
-  ];
+  const list =  Data.websites;
 
 
   React.useEffect(() => {
