@@ -21,20 +21,7 @@ export default function Blog() {
     };
   }, []);
 
-  const list = [
-    {
-      name: "Disappear to Evolve",
-      link: "https://smylifeinearth.blogspot.com/2025/10/disappear-to-evolve-power-of-going.html"
-    },
-    {
-      name: "Grades Are Just Numbers",
-      link: "https://smylifeinearth.blogspot.com/2025/05/grades-are-just-numbers.html"
-    },
-    {
-      name: "The Beginning to Success",
-      link: "https://smylifeinearth.blogspot.com/2022/01/the-beginning-to-success.html"
-    }
-  ];
+  const list =  Data.blogs;
 
   return (
     <>
