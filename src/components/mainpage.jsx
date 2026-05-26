@@ -4,14 +4,16 @@ import Bio from "./bio";
 import Works from "./work";
 import Contact from "./contact";
 import "./index.css";
+import Data from "./Data";
 
-function MainPage({data}) {
+
+function MainPage() {
   return (
     <>
-          <section id="home"><Home home={data.home} /></section>
-          <section id="about"><Bio bio={data.bio} /></section>
-          <section id="work"><Works datalinks ={ data} /></section>
-          <section id="contact"><Contact contact={data.contact} /></section>
+          <section id="home"><Home home={Data.home} /></section>
+          <section id="about"><Bio bio={Data.bio} /></section>
+          <section id="work"><Works datalinks ={ Data} /></section>
+          <section id="contact"><Contact contact={Data.contact} /></section>
     </>
   );
 }

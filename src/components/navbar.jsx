@@ -1,8 +1,9 @@
 import React from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import "./index.css";
+import Data from "./Data";
 
-function Navbar({ name }) {
+function Navbar() {
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -24,7 +25,7 @@ function Navbar({ name }) {
     };
   return (
     <nav className="navbar">
-          <div className="logo">{name}</div>
+          <div className="logo">{Data.name}</div>
 
       <div className="nav-links">
         <button onClick={() => goToSection("home")}>Home</button>

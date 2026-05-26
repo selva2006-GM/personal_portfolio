@@ -1,8 +1,9 @@
 import React from "react";
 import "./index.css";
+import { data } from "react-router-dom";
 
-export default function CodingPlatforms({codingPlatforms}) {
-    console.log(codingPlatforms);
+export default function CodingPlatforms({ datalink }) {
+    console.log("coding: " + datalink);
 function frameLoaded() {
   setTimeout(() => {
     window.scrollTo({

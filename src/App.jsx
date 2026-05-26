@@ -8,14 +8,12 @@ import Websites from "./components/websites";
 import Blog from "./components/blog"
 import "./components/index.css";
 
-import data from "./data.json";
-
 function App() {
   return (
     <BrowserRouter>
-          <Navbar name={data.name} />
+          <Navbar/>
       <Routes>
-              <Route path="/" element={< MainPage data={data} />} />
+              <Route path="/" element={< MainPage />} />
               <Route path="/coding-platforms" element={<CodingPlatforms />} />
         <Route path="/websites" element={<Websites />} />
         <Route path="/blog" element={<Blog />} />
