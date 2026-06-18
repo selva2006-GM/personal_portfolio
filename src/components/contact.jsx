@@ -8,11 +8,25 @@ export default function Contact({contact}) {
         e.preventDefault();
 
         const formData = new FormData(e.target);
+        const payload = {
+            name: formData.get("name"),
+            email: formData.get("email"),
+            message:formData.get("message")
+        };
 
-        await fetch("http://127.0.0.1:5000/email",{
+        const res = await fetch("/api/email", {
             method: "POST",
-            body: formData
+            headers : {
+                "Content-Type" : "application/json"
+            },
+            body: JSON.stringify(payload)
+            
         });
+        const data = await res.json();
+
+        alert(data.success ? "Message sent!" : "Failed");
+
+            e.target.reset();
     }
 
   return (
