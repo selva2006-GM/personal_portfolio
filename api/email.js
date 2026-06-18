@@ -3,10 +3,6 @@ import { Resend } from "resend";
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export default async function handler(req, res) {
-  // Debug
-  const ownerEmail = process.env.OWNER_EMAIL;
-  const fromEmail = process.env.FROM_EMAIL;
-
   if (req.method !== "POST") {
     return res.status(405).json({
       success: false,
@@ -37,12 +33,12 @@ export default async function handler(req, res) {
     });
 
   } catch (error) {
-    console.error("FULL ERROR:", error);
-  
-    return res.status(500).json({
-      success: false,
-      error: error.message,
-      stack: error.stack
-    });
-  }
+  console.error("FULL ERROR:", error);
+
+  return res.status(500).json({
+    success: false,
+    error: error.message,
+    stack: error.stack
+  });
+}
 }
