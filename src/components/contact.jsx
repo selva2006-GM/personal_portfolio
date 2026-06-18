@@ -16,17 +16,15 @@ export default function Contact({contact}) {
 
         const res = await fetch("/api/email", {
             method: "POST",
-            headers : {
-                "Content-Type" : "application/json"
+            headers: {
+              "Content-Type": "application/json"
             },
             body: JSON.stringify(payload)
-            
-        });
-        const data = await res.json();
-
-        alert(data.success ? "Message sent!" : "Failed");
-
-            e.target.reset();
+          });
+          
+          const text = await res.text();
+          
+          console.log("Response:", text);
     }
 
   return (
