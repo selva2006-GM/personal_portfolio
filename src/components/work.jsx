@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import "./index.css";
 import Data from "./Data";
 
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { SiLeetcode } from "react-icons/si";
+import * as FaIcons from "react-icons/fa";
+import * as SiIcons from "react-icons/si";
 
 import { FaCode } from "react-icons/fa";
 
