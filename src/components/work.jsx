@@ -3,10 +3,26 @@ import { Link } from "react-router-dom";
 import "./index.css";
 import Data from "./Data";
 
-import * as FaIcons from "react-icons/fa";
-import * as SiIcons from "react-icons/si";
+import {
+    FaCode,
+    FaReact,
+    FaHtml5,
+    FaCss3Alt,
+    FaPython,
+    FaJava
+} from "react-icons/fa";
 
-import { FaCode } from "react-icons/fa";
+import {
+    SiCplusplus,
+    SiSharp,
+    SiPostgresql,
+    SiMysql,
+    SiMongodb,
+    SiRedis,
+    SiJavascript,
+    SiC
+} from "react-icons/si";
+
 
 function Work({ tit, link }) {
     return (
@@ -18,88 +34,77 @@ function Work({ tit, link }) {
     );
 }
 
-// special icon fixes
-const customIcons = {
-    "C++": SiIcons.SiCplusplus,
-    "C#": SiIcons.SiSharp,
-    PostgreSQL: SiIcons.SiPostgresql,
-    MySQL: SiIcons.SiMysql,
-    MongoDB: SiIcons.SiMongodb,
-    Redis: SiIcons.SiRedis,
-    JavaScript: SiIcons.SiJavascript,
-    React: FaIcons.FaReact,
-    HTML5: FaIcons.FaHtml5,
-    CSS3: FaIcons.FaCss3Alt,
-    Python: FaIcons.FaPython,
-    Java: FaIcons.FaJava,
-    C: SiIcons.SiC,
+
+const skillIcons = {
+    "C++": SiCplusplus,
+    "C#": SiSharp,
+    "PostgreSQL": SiPostgresql,
+    "MySQL": SiMysql,
+    "MongoDB": SiMongodb,
+    "Redis": SiRedis,
+    "JavaScript": SiJavascript,
+    "React": FaReact,
+    "HTML5": FaHtml5,
+    "CSS3": FaCss3Alt,
+    "Python": FaPython,
+    "Java": FaJava,
+    "C": SiC
 };
 
+
 function getIcon(skill) {
-
-    // check custom icons first
-    if (customIcons[skill]) {
-        return customIcons[skill];
-    }
-
-    // remove spaces and symbols
-    const formatted = skill
-        .replace(/\s+/g, "")
-        .replace(/\./g, "")
-        .replace(/\#/g, "Sharp")
-        .replace(/\+\+/g, "plusplus");
-
-    // possible icon names
-    const siName = "Si" + formatted;
-    const faName = "Fa" + formatted;
-
-    return (
-        SiIcons[siName] ||
-        FaIcons[faName] ||
-        FaCode
-    );
+    return skillIcons[skill] || FaCode;
 }
+
 
 function Language({ className }) {
     return (
         <div className={className}>
             <h1>Skills</h1>
 
-            {Object.entries(Data.skills).map(([category, skills]) => (
-                <div className="skill-section" key={category}>
+            {Object.entries(Data.skills).map(
+                ([category, skills]) => (
+                    <div
+                        className="skill-section"
+                        key={category}
+                    >
+                        <h2>
+                            {category === "programming" &&
+                                "💻 Programming"}
 
-                    <h2>
-                        {category === "programming" && "💻 Programming"}
-                        {category === "web" && "🌐 Web"}
-                        {category === "dbms" && "🗄️ DBMS"}
-                    </h2>
+                            {category === "web" &&
+                                "🌐 Web"}
 
-                    <div className="icons">
+                            {category === "dbms" &&
+                                "🗄️ DBMS"}
+                        </h2>
 
-                        {skills.map((skill) => {
+                        <div className="icons">
+                            {skills.map((skill) => {
+                                const Icon =
+                                    getIcon(skill);
 
-                            const Icon = getIcon(skill);
-
-                            return (
-                                <div className="icon-box" key={skill}>
-                                    <Icon />
-                                  
-                                </div>
-                            );
-                        })}
-
+                                return (
+                                    <div
+                                        className="icon-box"
+                                        key={skill}
+                                    >
+                                        <Icon />
+                                    </div>
+                                );
+                            })}
+                        </div>
                     </div>
-                </div>
-            ))}
+                )
+            )}
         </div>
     );
 }
 
-export default function Works() {
 
+export default function Works() {
     return (
         <div className="works">
-
             {Data.works.map((work, index) => (
                 <Work
                     key={index}
