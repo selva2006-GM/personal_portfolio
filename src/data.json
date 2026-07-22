@@ -27,6 +27,10 @@
         }
     ],
     "websites": [
+        { 
+            "name" : "FundBridge",
+            "link" : "https://fundbridge-frontend-git-main-sdd7.vercel.app"
+        },
         {
             "name": "Portfolio",
             "link": "https://portfolio-mu-dusky-voqps6b9ep.vercel.app/"
