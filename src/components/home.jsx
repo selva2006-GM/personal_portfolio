@@ -30,7 +30,12 @@ export default function Home({home}) {
       className="Home"
       id="home" // Added id so your Navbar can find it
     >
-      <img src={home.image} alt="personal" id="personalphoto" />
+      <img
+    src={home.image}
+    alt="Selva Ganesh"
+    id="personalphoto"
+    fetchPriority="high"
+/>
       <div id="greeting" className="cursor typewriter-animation">
        {home.greeting}
       </div>
