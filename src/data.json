@@ -29,7 +29,7 @@
     "websites": [
         { 
             "name" : "FundBridge",
-            "link" : "https://fundbridge-frontend-git-main-sdd7.vercel.app/"
+            "link" : "https://fundbridge-frontend.vercel.app/"
         },
         {
             "name": "Portfolio",
