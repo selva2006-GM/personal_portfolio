@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Logs
 logs
 *.log
@@ -25,3 +26,6 @@ dist-ssr
 
 .vercel
 .env*
+=======
+.vercel
+>>>>>>> 9bbcb4a (Updated)
